@@ -26,7 +26,7 @@ import SimpleBackdrop from '../components/alerts/Backdrop';
 
 // #socket io
 import io from 'socket.io-client';
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://neurolab-space-api.onrender.com";
 var socket, selectedProjectCompare;
 
 

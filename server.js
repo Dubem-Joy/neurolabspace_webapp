@@ -46,7 +46,7 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 
     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
-  }
+};
 // ------------------DEPLOYMENT--------------
 
 // #error handling middlewares for api calls
@@ -63,7 +63,7 @@ const server = app.listen(PORT, console.log(`Server is running on PORT: ${PORT}`
 const io = require('socket.io')(server, {
     pingTimeout: 60000,
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://neurolab-space.onrender.com",
     }
 });
 
