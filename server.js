@@ -38,7 +38,7 @@ app.use(express.json({ extended: false }));
 // #manage users api calls
 app.use('/api/users', userRoutes);
 app.use('/api/projects', projectRoutes);
-app.use('/api/messages', messageRoutes);
+app.use('/messages', messageRoutes);
 
 // ------------------DEPLOYMENT--------------
 if (process.env.NODE_ENV === 'production') {
