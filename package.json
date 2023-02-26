@@ -1,0 +1,32 @@
+{
+  "name": "neuro-labspace",
+  "version": "1.0.0",
+  "description": "A project management app for the Neuro-Lab",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dubem-Joy/Labspace.git"
+  },
+  "author": "Joy Iroegbu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dubem-Joy/Labspace/issues"
+  },
+  "homepage": "https://github.com/Dubem-Joy/Labspace#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.0",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.6.0"
+  }
+}
