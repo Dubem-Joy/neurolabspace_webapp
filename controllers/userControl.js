@@ -59,7 +59,7 @@ const authEmail = asyncHandler(async (req, res) => {
             html: `
             <h3 style="font-weight:300">Hello ${name},<h3>
 
-            <h3 style="font-weight:300">Your email has been authenticated on the Neuro-Lab space. <a a href='http://localhost:3000/' >set up your account</a> using ${email.toString()}.</h3>
+            <h3 style="font-weight:300">Your email has been authenticated on the Neuro-Lab space. <a a href='https://neurolab-space.onrender.com/' >set up your account</a> using ${email.toString()}.</h3>
             
             </br>
             </br>
