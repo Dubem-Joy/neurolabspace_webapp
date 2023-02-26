@@ -60,7 +60,7 @@ const SimpleAccordion = ({ project, color, adminAccordion, showAlert, openDynCha
             let projectId = project._id
             let userList = team.filter((item) => item._id === userId)
             handleBackdropToggle();
-            await axios.put('/projects/adduser', { projectId, userId }, config)
+            await axios.put('/api/projects/adduser', { projectId, userId }, config)
             if (projectUsers.length === 0) {
                 setProjectUsers([userList[0]])
                 checkAccess();
@@ -91,7 +91,7 @@ const SimpleAccordion = ({ project, color, adminAccordion, showAlert, openDynCha
             let userId = e.target.id
             let projectId = project._id
             handleBackdropToggle();
-            await axios.put('/projects/removeuser', { projectId, userId }, config);
+            await axios.put('/api/projects/removeuser', { projectId, userId }, config);
             setProjectUsers(projectUsers.filter((item) => item._id !== userId));
             checkAccess();
             handleBackdropClose();
@@ -119,7 +119,7 @@ const SimpleAccordion = ({ project, color, adminAccordion, showAlert, openDynCha
             };
 
             handleBackdropToggle();
-            const { data } = await axios.get('/projects', config);
+            const { data } = await axios.get('/api/projects', config);
             handleBackdropClose();
             setProjects(data);
 
@@ -188,11 +188,11 @@ const SimpleAccordion = ({ project, color, adminAccordion, showAlert, openDynCha
                 }
             };
             handleBackdropToggle();
-            await axios.put('/projects/update',
+            await axios.put('/api/projects/update',
                 { projectId, tp, ihc, photo, quant, inter, todo, inProgress, complete, checkout },
                 config
             );
-            const { data } = await axios.get('/projects', config);
+            const { data } = await axios.get('/api/projects', config);
             handleBackdropClose();
             setProjects(data)
 
@@ -219,7 +219,7 @@ const SimpleAccordion = ({ project, color, adminAccordion, showAlert, openDynCha
         config
       );
       
-      const { data } = await axios.get('/projects', config);
+      const { data } = await axios.get('/api/projects', config);
       setProjects(data)
       handleBackdropClose();
 

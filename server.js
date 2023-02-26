@@ -31,21 +31,21 @@ connectDB();
 
 // !API calls
 // #to accept json data
-app.use(express.json())
+app.use(express.json({ extended: false }));
 
 
 
 // #manage users api calls
-app.use('/users', userRoutes);
-app.use('/projects', projectRoutes);
-app.use('/messages', messageRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/projects', projectRoutes);
+app.use('/api/messages', messageRoutes);
 
 // ------------------DEPLOYMENT--------------
 if (process.env.NODE_ENV === 'production') {
     //*Set static folder up in production
     app.use(express.static('client/build'));
 
-    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
+    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')));
 };
 // ------------------DEPLOYMENT--------------
 

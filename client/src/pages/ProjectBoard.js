@@ -100,12 +100,12 @@ const ProjectBoard = ({ openDynChat, openDynAddProject,  openDynEditProject, ope
             };
 
             handleBackdropToggle();
-            await axios.put('/projects/delete',
+            await axios.put('/api/projects/delete',
                 { projectId },
                 config
             );
 
-            const { data } = await axios.get('/projects', config);
+            const { data } = await axios.get('/api/projects', config);
             handleBackdropClose();
             setProjects(data);
             

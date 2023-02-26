@@ -46,7 +46,7 @@ const Chat = ({openDyDashSummary}) => {
                     }
             };
             
-            const { data } = await axios.get(`/messages/${selectedChat._id}`, config);
+            const { data } = await axios.get(`/api/messages/${selectedChat._id}`, config);
             setMessages(data);
 
             // *socket io
@@ -69,7 +69,7 @@ const Chat = ({openDyDashSummary}) => {
                 };
                 
                 setNewMsg("");
-                const { data } = await axios.post("/messages", {
+                const { data } = await axios.post("/api/messages", {
                     msg: newMsg,
                     projectId: selectedChat._id,
                 }, config);

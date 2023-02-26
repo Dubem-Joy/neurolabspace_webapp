@@ -57,7 +57,7 @@ const ManageTeam = ({ openDyDashSummary }) => {
             var role = teamMember.role;
             var admin = !teamMember.admin;
              
-            const { data } = await axios.put('/users/profile',
+            const { data } = await axios.put('/api/users/profile',
                 { userId, name, role, admin, },
                 config
             );
@@ -87,7 +87,7 @@ const ManageTeam = ({ openDyDashSummary }) => {
             };
              
             
-            const { data } = await axios.post('/users/authemail',
+            const { data } = await axios.post('/api/users/authemail',
                 { email, emailAdmin, name },
                 config
             );

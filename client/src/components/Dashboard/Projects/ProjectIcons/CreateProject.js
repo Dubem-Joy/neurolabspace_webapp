@@ -89,7 +89,7 @@ const CreateProject = ({openDyDashSummary}) => {
 
       handleBackdropToggle();
       
-      const { data }  = await axios.post('/projects/project',
+      const { data }  = await axios.post('/api/projects/project',
         {name, cost, tp, ihc, photo, quant, inter, paid, bal, todo, inProgress, complete, checkout, user },
         config
       );

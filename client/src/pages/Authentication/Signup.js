@@ -63,7 +63,7 @@ const Signup = ({showSignup, handleShow}) => {
       };
 
       const { data } = await axios.post(
-        '/users',
+        '/api/users',
         { name, email, password },
         config
       );

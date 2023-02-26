@@ -56,12 +56,12 @@ export default function Payment({ openDyDashSummary }) {
       };
       const projectId = projectEdit._id;
       handleBackdropToggle();
-      await axios.put('/projects/payment',
+      await axios.put('/api/projects/payment',
         { projectId, paidCost, balance },
         config
       );
       
-      const { data } = await axios.get('/projects', config);
+      const { data } = await axios.get('/api/projects', config);
       setProjects(data)
       setMessage('Payment updated');
       setSeverity('success');

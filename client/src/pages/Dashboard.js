@@ -149,7 +149,7 @@ const Dashboard = () => {
                     Authorization: `Bearer ${user.token}`
                 }
             };
-            const { data } = await axios.get('/users/allusers', config);
+            const { data } = await axios.get('/api/users/allusers', config);
             setTeam(data)
         } catch (error) {
             console.log(error)
@@ -166,7 +166,7 @@ const Dashboard = () => {
             };
 
             handleBackdropToggle();
-            const { data } = await axios.get('/projects', config);
+            const { data } = await axios.get('/api/projects', config);
             handleBackdropClose();
             setProjects(data);
 

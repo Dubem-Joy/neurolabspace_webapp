@@ -86,11 +86,11 @@ const EditProject = ({openDyDashSummary}) => {
       };
       const projectId = projectEdit._id;
       handleBackdropToggle();
-      const data1 = await axios.put('/projects/edit',
+      const data1 = await axios.put('/api/projects/edit',
         { projectId, name, cost, tp, ihc, photo, quant, inter, bal},
         config
       );
-      const { data } = await axios.get('/projects', config);
+      const { data } = await axios.get('/api/projects', config);
       // document.location.reload()
       
       setProjects(data);

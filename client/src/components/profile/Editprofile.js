@@ -61,7 +61,7 @@ const Editprofile = ({openDyDashSummary}) => {
 
             var name = firstName + ' ' + lastName;
             const admin = user.admin;
-            const { data }  = await axios.put('/users/profile',
+            const { data }  = await axios.put('/api/users/profile',
                 { userId, name, role, admin, },
                 config
             );

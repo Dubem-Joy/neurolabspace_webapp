@@ -25,7 +25,7 @@ const ProjectProvider = ({ children }) => {
                 }
             };
 
-            const { data } = await axios.get('/projects', config);
+            const { data } = await axios.get('/api/projects', config);
             setProjects(data);
 
         } catch (error) {

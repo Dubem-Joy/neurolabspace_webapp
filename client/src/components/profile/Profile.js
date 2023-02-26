@@ -75,7 +75,7 @@ export default function ProfileMenu({user, openDynProfile, openDynTeam, openDynR
           Authorization: `Bearer ${user.token}`
         }
       };
-      const { data } = await axios.get('/users/allusers', config);
+      const { data } = await axios.get('/api/users/allusers', config);
       setTeam(data)
     } catch (error) {
       console.log(error)
